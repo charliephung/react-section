@@ -1,8 +1,8 @@
-#react-section
+# react-section
 
-###Peer dependencies: "react-scroll": "^1.7.10"
+### Peer dependencies: "react-scroll": "^1.7.10"
 
-##Example
+## Example
 
 ```javascript
 import React, { Component } from "react";
@@ -54,6 +54,7 @@ export default App;
 ```
 
 **scrollToFlag** = (flagName, top = 0, duration = 500) => {..}
+
 flagName: Name of marking flag is required
 top: Offset from top default is 0
 duration: Duration default is 500
