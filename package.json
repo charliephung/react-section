@@ -1,6 +1,6 @@
 {
   "name": "react-section",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Marking dom element",
   "main": "build/index.js",
   "scripts": {
@@ -14,7 +14,8 @@
   ],
   "author": {
     "name": "Hiep Phung",
-    "email": "phunghiep2709@gmail.com"
+    "email": "phunghiep2709@gmail.com",
+    "github": "https://github.com/charliephung/react-section"
   },
   "license": "ISC",
   "dependencies": {
