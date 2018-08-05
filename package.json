@@ -11,10 +11,14 @@
     "react",
     "section",
     "flag",
-    "react section",
     "lazy",
     "load",
-    "lazy load"
+    "lazy load",
+    "react load",
+    "react section",
+    "react flag",
+    "react marking",
+    "react lazy load"
   ],
   "author": {
     "name": "Hiep Phung",
