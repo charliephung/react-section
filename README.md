@@ -71,29 +71,45 @@ duration: Duration default is 500
   <!-- Flag will not accept children is lazyLoad props is provided -->
   <Section.Flag
     lazyLoad={{
-        // Loaded delay time
-        delay: 2000,
-        loading: () => <h1>I will load after 2s</h1>,
-        loaded: () => import("./component/Loaded"),
-        loadedProps: { onClick: () => alert("Hi i'm lazy 1") }
-    }}
+      // Loaded delay time
+      delay: 2000,
+      // initProps apply to Flag not the loading component
+      initProps: {
+        className: "beforeload",
+        style: {
+          backgroundColor: "green"
+        }
+      },
+      // Props component will receivie after it is loaded
+      loadedProps: { onClick: () => alert("Hi i'm lazy 1") }
+      loading: () => <h1>I will load after 2s</h1>,
+      loaded: () => import("./component/Loaded"),
+  }}
     flagName="lazyheader"
-    className="header__lazy"
+    className="component__lazy"
   />
   <Section.Flag
     lazyLoad={{
-        // Component will be loaded when appear in to viewport
-        loadOnView: true,
-        //Component will be loaded when scroll down 200px from it
-        fromBottom: 200,
-        loading: () => <h1>Scroll down 200px from me to load</h1>,
-        loaded: () => import("./component/Loaded2"),
-        loadedProps: {
-            onClick: () => alert("Hi i'm lazy 2")
+      // Again these props apply to the Flag not the component
+      // and will be remove after component is loaded
+      initProps: {
+        className: "beforeload",
+        style: {
+          backgroundColor: "green"
         }
+      },
+      // Component will be loaded when appear in to viewport
+      loadOnView: true,
+      // Component will be loaded when scroll down 200px from it
+      fromBottom: 200,
+      loadedProps: {
+          onClick: () => alert("Hi i'm lazy 2")
+      }
+      loading: () => <h1>Scroll down 200px from me to load</h1>,
+      loaded: () => import("./component/Loaded2"),
     }}
     flagName="lazyheader2"
-    className="header__lazy"
+    className="component__lazy"
   />
 </Section>
 ```
