@@ -1,4 +1,4 @@
 "use strict";
 
-var _reactSection = require("./lib/");
+var _reactSection = require("./build");
 module.exports = _reactSection;
